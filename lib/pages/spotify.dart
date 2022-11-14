@@ -38,6 +38,64 @@ class SpotifyUi extends StatelessWidget {
             )
           ],
         ),
+        SizedBox(
+          height: 10,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              height: 130,
+              width: 89,
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.grey[800]),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.electric_bolt_rounded,
+                        color: Colors.white,
+                        size: 15,
+                      ),
+                      Text(
+                        "70%",
+                        style: GoogleFonts.kanit(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 18,
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: Colors.grey[900]),
+                    child: Icon(
+                      CupertinoIcons.headphones,
+                      color: Colors.white,
+                      size: 40,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: 130,
+              width: 89,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.grey[800]),
+            ),
+          ],
+        )
       ],
     );
   }
