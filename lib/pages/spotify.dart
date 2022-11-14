@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,6 +10,7 @@ class SpotifyUi extends StatelessWidget {
     return Column(
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,8 +31,13 @@ class SpotifyUi extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(
+              height: 40,
+              width: 40,
+              child: Image.asset("image/spotify.png"),
+            )
           ],
-        )
+        ),
       ],
     );
   }
