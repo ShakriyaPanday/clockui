@@ -12,18 +12,19 @@ class SpotifyUi extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            //song name
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Surreal",
+                  "Humdard",
                   style: GoogleFonts.poppins(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 17),
                 ),
                 Text(
-                  "Dan croll",
+                  "Arijit Singh",
                   style: GoogleFonts.poppins(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -31,6 +32,7 @@ class SpotifyUi extends StatelessWidget {
                 ),
               ],
             ),
+            //spotify icon
             SizedBox(
               height: 40,
               width: 40,
@@ -41,9 +43,11 @@ class SpotifyUi extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
+        //two column
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            //headset
             Container(
               height: 130,
               width: 89,
@@ -79,7 +83,7 @@ class SpotifyUi extends StatelessWidget {
                         borderRadius: BorderRadius.circular(100),
                         color: Colors.grey[900]),
                     child: Icon(
-                      CupertinoIcons.headphones,
+                      Icons.headphones_rounded,
                       color: Colors.white,
                       size: 40,
                     ),
@@ -87,12 +91,48 @@ class SpotifyUi extends StatelessWidget {
                 ],
               ),
             ),
+            //song image
             Container(
               height: 130,
               width: 89,
+              padding: EdgeInsets.all(5),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.grey[800]),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.volume_down,
+                        color: Colors.white,
+                        size: 19,
+                      ),
+                      Text(
+                        "20%",
+                        style: GoogleFonts.kanit(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                      height: 90,
+                      width: 80,
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.deepOrange[300]),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Image.asset("image/song.jpeg"))),
+                ],
+              ),
             ),
           ],
         )
