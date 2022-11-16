@@ -1,3 +1,4 @@
+import 'package:clockui/pages/clocktime.dart';
 import 'package:clockui/pages/spotify.dart';
 import 'package:clockui/pages/translate.dart';
 import 'package:flutter/material.dart';
@@ -41,14 +42,14 @@ class _ClockDesignState extends State<ClockDesign> {
                 });
               },
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.green[600]),
                 child: Text(
                   "Spotify",
                   style: GoogleFonts.poppins(
-                    fontSize: 20,
+                    fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -62,14 +63,35 @@ class _ClockDesignState extends State<ClockDesign> {
                 });
               },
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.blue[600]),
                 child: Text(
                   "Translate",
                   style: GoogleFonts.poppins(
-                    fontSize: 20,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  clockWidget = TimeUi();
+                });
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.blue[600]),
+                child: Text(
+                  "Clock",
+                  style: GoogleFonts.poppins(
+                    fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
