@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TranslateUi extends StatelessWidget {
@@ -6,7 +7,23 @@ class TranslateUi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("translate"),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Container(
+                child: Column(
+                  children: [
+                    Text("English"),
+                    Icon(CupertinoIcons.arrow_down),
+                    Text("Nepali")
+                  ],
+                ),
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }
